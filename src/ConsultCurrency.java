@@ -7,9 +7,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ConsultCurrency {
-    public CurrencyData searchCurrency(String nameCurrency1, String nameCurrency2, double ammount){
+    public CurrencyData searchCurrency(String nameCurrency1, String nameCurrency2, double amount) {
         URI url = URI.create("https://v6.exchangerate-api.com/v6/01e4be1c479e721ee6efc9c2/pair/" +
-                nameCurrency1 + "/" + nameCurrency2 + "/" + ammount);
+                nameCurrency1 + "/" + nameCurrency2 + "/" + amount);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
